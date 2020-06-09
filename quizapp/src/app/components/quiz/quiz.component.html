@@ -1,0 +1,82 @@
+
+
+<h1 class="text-center">Quiz system</h1>
+<h2 class="text-center">{{quizModel[contador-1].question}}</h2>
+
+   <ul class="answers-container">
+      <li id="tarjetaA" #tarjetaA (click)="validar(quizModel[contador-1].answera,tarjetaA)" class="answers">
+         <span>A</span>
+         <p>{{quizModel[contador-1].answera}}</p>
+      </li>
+
+      <li #tarjetaB (click)="validar(quizModel[contador-1].answerb,tarjetaB)" class="answers">
+         <span>B</span>
+         <p>{{quizModel[contador-1].answerb}}</p>
+      </li>
+
+      <li #tarjetaC (click)="validar(quizModel[contador-1].answerc,tarjetaC)" class="answers">
+         <span>C</span>
+         <p>{{quizModel[contador-1].answerc}}</p>
+      </li>
+
+      <li #tarjetaD (click) ="validar(quizModel[contador-1].answerd,tarjetaD)" class="answers">
+         <span>D</span>
+         <p>{{quizModel[contador-1].answerd}}</p>
+      </li>
+
+   </ul>
+
+   <div class="text-center">
+      <button (click)="siguiente()" class="btn btn-primary text-center">Next Question</button>
+   </div>
+   
+
+
+
+ 
+ 
+<!--
+
+<form (ngSubmit)="siguiente()">
+    <div class="form-group">
+      <label for="question">{{quizModel[contador-1].question}}</label>
+      <div class="card-columns" >
+      
+        <div #tarjetaA id="tarjetaA" class="card" value="quizModel[contador-1].answera"  (click)="validar(quizModel[contador-1].answera,tarjetaA)">
+              <div class="col1"><lable class="col1">A</lable></div>
+              <div class="card-body">
+                 <p class="card-text">{{quizModel[contador-1].answera}}</p>
+              </div>
+        </div>
+
+     
+        -Tarjeta B-
+        <div #tarjetaA id="tarjetaA" class="card" value="quizModel[contador-1].answera"  (click)="validar(quizModel[contador-1].answera,tarjetaA)">
+          <lable class="col1">A</lable>
+           <div class="card-body">
+              <p class="card-text text-center">{{quizModel[contador-1].answera}}</p>
+           </div>
+     </div>
+      -tarjeta C
+      <div #tarjetaA id="tarjetaA" class="card" value="quizModel[contador-1].answera"  (click)="validar(quizModel[contador-1].answera,tarjetaA)">
+        <lable class="col1">A</lable>
+         <div class="card-body">
+            <p class="card-text text-center">{{quizModel[contador-1].answera}}</p>
+         </div>
+   </div>
+      -tarjeta d
+      <div #tarjetaA id="tarjetaA" class="card" value="quizModel[contador-1].answera"  (click)="validar(quizModel[contador-1].answera,tarjetaA)" >
+        <lable class="col1">A</lable>
+         <div class="card-body">
+            <p class="card-text text-center">{{quizModel[contador-1].answera}}</p>
+         </div>
+   </div>
+
+      </div>
+      
+      
+      --fin tarjetas
+    </div>
+    <button [disabled]="!selected" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+-->
